@@ -21,12 +21,6 @@
           { "key": "Content-Type", "value": "application/json" }
         ]
       }
-    ],
-    "functions": {
-      "api/index.js": {
-        "memory": 512,
-        "maxDuration": 10
-      }
-    }
+    ] 
   }
   
