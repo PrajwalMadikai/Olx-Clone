@@ -3,12 +3,12 @@ const cors = require('cors');
 const dotenv = require('dotenv');
 const express = require('express');
 const mongoose = require('mongoose');
-const { User } = require('../Backend/userModal');
+const { User } = require('../userModal');
 const session = require('express-session');
 const multer = require('multer');
-const Product=require('../Backend/productModal')
+const Product=require('../Modal/productModal')
 const path=require('path')
-const Whishlist=require('../Backend/savedModal');
+const Whishlist=require('../Modal/savedModal');
 const jwt = require('jsonwebtoken');
 
 dotenv.config();
