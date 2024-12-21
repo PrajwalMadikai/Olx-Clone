@@ -1,0 +1,32 @@
+{
+    "version": 2,
+    "builds": [
+      { "src": "api/index.js", "use": "@vercel/node" }
+    ],
+    "routes": [
+      { "src": "/api/(.*)", "dest": "/api/index.js" }
+    ],
+    "static": {
+      "public": "uploads"
+    },
+    "env": {
+      "MONGODB_URI": "@mongodb_uri",
+      "JWT_SECRET": "@jwt_secret"
+    },
+    "headers": [
+      {
+        "source": "/api/(.*)",
+        "headers": [
+          { "key": "Access-Control-Allow-Origin", "value": "*" },
+          { "key": "Content-Type", "value": "application/json" }
+        ]
+      }
+    ],
+    "functions": {
+      "api/index.js": {
+        "memory": 512,
+        "maxDuration": 10
+      }
+    }
+  }
+  
